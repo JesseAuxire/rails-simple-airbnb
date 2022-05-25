@@ -1,0 +1,19 @@
+<h1>All our flats <%= "(#{Flat.count})" %></h1>
+
+<div class="container d-flex justify-content-around">
+  <div class="card">
+    <% @flats.each do |flat| %>
+      <h2><%= flat.name %></h2>
+      <p><%= flat.address %></p>
+      <ul>
+        <li><%= flat.number_of_guests %></li>
+        <li><%= flat.price_per_night %></li>
+      </ul>
+      <div>
+        <%= "More info" %>
+      </div>
+    <% end %>
+    
+  </div>
+
+</div>
